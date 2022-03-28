@@ -11,17 +11,11 @@
   --lightCyan: #4ABEBD;
   --grayishBlue:  #98a6bd;
   --brightYellow: #c0df34; 
-  --padding-default: 15px;
-  --margin-default: 15px;
+  --padding-default: 25px;
+  --margin-default: 25px;
 }
 
-body {
-  font-family: 'Karla', sans-serif;
-  font-size: 1.6rem;
-  color: var(--lightGray);
-  background-color: var(--lightGray);
-}
-
+/* Global Elements' Styles */
 h1 {
   font-size: 2.4rem;
   font-weight: 750;
@@ -36,8 +30,26 @@ p {
   line-height: 1.5;
 }
 
+/* Local Styles */
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.6rem;
+  color: var(--lightGray);
+  background-color: var(--lightGray);
+}
+
+main {
+  padding: var(--padding-default);
+  display: flex;
+  justify-content: center;  /* Centers through x axis */
+  min-height: 100vh;
+  align-items: center;  /* Centers the container vertically  */
+}
+
 .wrapper-sections {
-  padding: var(--padding-default);  /* Adds padding to all the section's parent container  */
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
 }
 
 .section {
@@ -45,7 +57,7 @@ p {
 }
 
 .section > * {
-  margin-top: var(--margin-default);  /* Adds margin-top to all the direct childs of the class .section */
+  margin-top: var(--margin-default);  /* Adds margin to thr top of all the direct childs of the class '.section' */
 }
 
 .section > *:first-child {
@@ -64,6 +76,7 @@ p {
 .section-joinOurCommunity {
   background-color: var(--white);
   color: var(--grayishBlue);
+  border-radius: 5px 5px 0 0;  /* Implenemts border radius to top left and top right of the card */
 }
 
 .section-signUp {
@@ -76,14 +89,14 @@ p {
 
 .subscriptionFee {
   display: inline-flex;
-  min-height: min-content;
   align-items: center;  /* Centers the text 'per month' vertically.   */
 }
 
-.monthlySubscriptionAmount {
+.dollar {
   font-size: 32px;
   margin-right: 5px;  /* Pushes the text 'per month' 5px to the right  */
   color: var(--white);
+  font-weight: 550;
 }
 
 .button {
@@ -94,12 +107,14 @@ p {
   background-color: var(--brightYellow) ;
   padding: calc(var(--padding-default) * .5);
   text-align: center;
+  font-size: 1.8rem;
   font-weight: 550;
   border-radius: 5px;
 }
 
 .section-whyUs {
   background-color: var(--lightCyan);
+  border-radius: 0 0 5px 5px;  /* Adds border radius to bottom right and bottom left of the card */
 }
 
 .section-whyUs h2 {
@@ -107,14 +122,72 @@ p {
 }
 
 .section-whyUs ul > li {
-  margin-top: 10px;  /* adds margin top to all the list items */
+  margin-top: 5px;  /* adds margin top to all the list items */
 }
 
 footer {
+  margin-bottom: var(--margin-default);
+}
+
+.attribution { 
+  color: var(--grayishBlue);
+  text-align: center; 
+  font-size: 1.1rem; 
+}
+
+.attribution a { 
   color: var(--darkCyan);
 }
 
+/* Media queries */
+@media (min-width: 760px) {
 
+  :root {
+    --padding-default: 50px;
+  }
 
+  body {
+    font-size: 2rem;
+  }
 
+  h1 {
+    font-size: 3.2rem;
+  }
 
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  .dollar {
+    font-size: 4.8rem;
+  }
+
+  .button {
+    font-size: 2.2rem;
+  }
+
+  .wrapper-sections {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .section-joinOurCommunity {
+    flex-basis: 100%;  /* Takes all the width of the container */
+    border-radius: 10px 10px 0 0;  /* Adds border radius to the top left and top right of the card */
+  }
+
+  .section-signUp {
+    flex-basis: 50%;
+    border-radius: 0 0 0 10px;  /* Adds radius to bottom left of the card */
+
+  }
+
+  .section-whyUs {
+    flex-basis: 50%;
+    border-radius: 0 0 10px 0;  /* Adds radius to bottom right of the card */
+  }
+
+  .attribution {
+    font-size: 1.6rem;
+  }
+}
