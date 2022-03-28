@@ -1,0 +1,120 @@
+/* External Resource */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+/* font-family: 'Karla', sans-serif; */
+
+/* Variables */
+:root {
+  font-size: 10px;
+  --white: white; 
+  --lightGray: #e5eff5;
+  --darkCyan: #2ab2af;
+  --lightCyan: #4ABEBD;
+  --grayishBlue:  #98a6bd;
+  --brightYellow: #c0df34; 
+  --padding-default: 15px;
+  --margin-default: 15px;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.6rem;
+  color: var(--lightGray);
+  background-color: var(--lightGray);
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 750;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 550;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.wrapper-sections {
+  padding: var(--padding-default);  /* Adds padding to all the section's parent container  */
+}
+
+.section {
+  padding: var(--padding-default);  /* Adds padding to all the cards  */
+}
+
+.section > * {
+  margin-top: var(--margin-default);  /* Adds margin-top to all the direct childs of the class .section */
+}
+
+.section > *:first-child {
+  margin-top: 0;  /* Removes margin-top from all the first childs of the class */
+} 
+
+
+.section-joinOurCommunity h1 {
+  color: var(--darkCyan);
+}
+
+.section-joinOurCommunity h2 {
+  color: var(--brightYellow);
+}
+
+.section-joinOurCommunity {
+  background-color: var(--white);
+  color: var(--grayishBlue);
+}
+
+.section-signUp {
+  background-color: var(--darkCyan) ;
+}
+
+.section-signUp h2 {
+  color: var(--white);
+}
+
+.subscriptionFee {
+  display: inline-flex;
+  min-height: min-content;
+  align-items: center;  /* Centers the text 'per month' vertically.   */
+}
+
+.monthlySubscriptionAmount {
+  font-size: 32px;
+  margin-right: 5px;  /* Pushes the text 'per month' 5px to the right  */
+  color: var(--white);
+}
+
+.button {
+  display: block;
+  /* Displaying as a block element would allow the button to take all the width of the parent */
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--brightYellow) ;
+  padding: calc(var(--padding-default) * .5);
+  text-align: center;
+  font-weight: 550;
+  border-radius: 5px;
+}
+
+.section-whyUs {
+  background-color: var(--lightCyan);
+}
+
+.section-whyUs h2 {
+  color: var(--white);
+}
+
+.section-whyUs ul > li {
+  margin-top: 10px;  /* adds margin top to all the list items */
+}
+
+footer {
+  color: var(--darkCyan);
+}
+
+
+
+
+
