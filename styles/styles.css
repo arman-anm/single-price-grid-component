@@ -112,6 +112,10 @@ main {
   border-radius: 5px;
 }
 
+.button:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 .section-whyUs {
   background-color: var(--lightCyan);
   border-radius: 0 0 5px 5px;  /* Adds border radius to bottom right and bottom left of the card */
